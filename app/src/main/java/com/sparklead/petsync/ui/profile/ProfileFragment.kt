@@ -1,4 +1,4 @@
-package com.sparklead.petsync
+package com.sparklead.petsync.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.sparklead.petsync.home
+package com.sparklead.petsync.ui.home
 
 import android.content.Context
 import android.os.Bundle

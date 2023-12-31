@@ -1,4 +1,4 @@
-package com.sparklead.petsync.home
+package com.sparklead.petsync.ui.home
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
@@ -23,12 +23,9 @@ class HomeViewModel @Inject constructor(private val raspberryPiRepository: Raspb
         raspberryPiRepository.switchOnOff(message)
             .catch {
                 _homeUiState.value = HomeUiState.Error(it.message.toString())
-                Log.e("@@@@",it.message.toString())
             }
             .collect {
                 _homeUiState.value = HomeUiState.OnOffSuccess(it)
-                Log.e("@@@",it.toString())
             }
     }
-
 }

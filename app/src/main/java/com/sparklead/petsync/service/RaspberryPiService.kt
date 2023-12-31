@@ -1,9 +1,9 @@
 package com.sparklead.petsync.service
 
-import com.sparklead.petsync.dto.OnOffResponse
+import com.sparklead.petsync.dto.OnOffDto
 
 interface RaspberryPiService {
 
-    suspend fun onOff(status: String) : OnOffResponse
+    suspend fun onOff(status: String) : OnOffDto
 
 }

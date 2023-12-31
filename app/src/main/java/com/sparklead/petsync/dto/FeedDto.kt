@@ -3,8 +3,11 @@ package com.sparklead.petsync.dto
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class OnOffResponse(
+data class FeedDto(
 
-    val message : String
+    val id: String,
 
+    val pet: String,
+
+    val timestamp: String
 )

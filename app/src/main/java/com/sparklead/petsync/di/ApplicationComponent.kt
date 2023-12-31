@@ -1,5 +1,7 @@
 package com.sparklead.petsync.di
 
+import com.sparklead.petsync.service.FeedService
+import com.sparklead.petsync.service.FeedServiceImp
 import com.sparklead.petsync.service.RaspberryPiService
 import com.sparklead.petsync.service.RaspberryPiServiceImp
 import dagger.Module
@@ -45,4 +47,9 @@ object ApplicationComponent {
     @Singleton
     fun providesRaspberryPiService(client: HttpClient): RaspberryPiService =
         RaspberryPiServiceImp(client)
+
+    @Provides
+    @Singleton
+    fun providesFeedService(client: HttpClient): FeedService =
+        FeedServiceImp(client)
 }

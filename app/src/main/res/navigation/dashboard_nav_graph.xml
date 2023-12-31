@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sparklead.petsync.home.HomeFragment"
+        android:name="com.sparklead.petsync.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/historyListFragment"
-        android:name="com.sparklead.petsync.HistoryListFragment"
+        android:name="com.sparklead.petsync.ui.history.HistoryListFragment"
         android:label="fragment_history_list"
         tools:layout="@layout/fragment_history_list" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.sparklead.petsync.ProfileFragment"
+        android:name="com.sparklead.petsync.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
