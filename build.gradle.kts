@@ -5,4 +5,5 @@ plugins {
     id("androidx.navigation.safeargs") version "2.6.0" apply false
     id("org.jetbrains.kotlin.plugin.serialization") version "1.5.21" apply false
     id("com.google.dagger.hilt.android") version "2.47" apply false
+    id("com.google.gms.google-services") version "4.4.0" apply false
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251798326816",
+    "project_id": "petsync-dd38d",
+    "storage_bucket": "petsync-dd38d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251798326816:android:9ac4c9da0abdad354c3645",
+        "android_client_info": {
+          "package_name": "com.sparklead.petsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzDy5-o9gg6eTZKR_SSYeaxlqd7iVOws0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
