@@ -99,7 +99,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="16sp"
             android:fontFamily="@font/outfit_regular"
-            android:text="Cat"
             android:textSize="26sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -142,7 +141,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/outfit_regular"
-                    android:text="01/02/2023"
                     android:textSize="18sp" />
 
                 <TextView
@@ -175,7 +173,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/outfit_regular"
-                    android:text="2hr 09min"
                     android:textSize="18sp" />
 
                 <TextView

@@ -3,7 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.history.HistoryListFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:layout_margin="10sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/outfit_medium"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_crypto_list"

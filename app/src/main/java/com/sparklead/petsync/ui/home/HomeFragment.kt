@@ -21,6 +21,9 @@ import com.sparklead.petsync.databinding.FragmentHomeBinding
 import com.sparklead.petsync.dto.FeedDto
 import com.sparklead.petsync.firebase.FirebaseService
 import com.sparklead.petsync.utils.Constants
+import com.zegocloud.uikit.prebuilt.call.config.ZegoNotificationConfig
+import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig
+import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationService
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -42,6 +45,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         fcmSetup()
+        videoCallServices("6969")
         return binding.root
     }
 
@@ -138,5 +142,26 @@ class HomeFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+        ZegoUIKitPrebuiltCallInvitationService.unInit()
+    }
+
+    private fun videoCallServices(userID: String) {
+        val appID: Long = 67143961 // your App ID of Zoge Cloud
+        val appSign = "93204944c2b3600a7dea583500c1a2f2c998e54e60bec98edaf7f8147ea3e00e" // your App Sign of Zoge Cloud
+        val application = requireActivity().application // Android's application context
+        val callInvitationConfig = ZegoUIKitPrebuiltCallInvitationConfig()
+//        callInvitationConfig.notifyWhenAppRunningInBackgroundOrQuit = true
+        val notificationConfig = ZegoNotificationConfig()
+        notificationConfig.sound = "zego_uikit_sound_call"
+        notificationConfig.channelID = "CallInvitation"
+        notificationConfig.channelName = "CallInvitation"
+        ZegoUIKitPrebuiltCallInvitationService.init(
+            application,
+            appID,
+            appSign,
+            userID,
+            userID,
+            callInvitationConfig
+        )
     }
 }

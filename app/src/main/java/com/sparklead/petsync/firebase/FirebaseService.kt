@@ -10,6 +10,7 @@ import android.graphics.Color
 import android.media.AudioAttributes
 import android.media.RingtoneManager
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -42,6 +43,12 @@ class FirebaseService : FirebaseMessagingService() {
     override fun onMessageReceived(p0: RemoteMessage) {
         super.onMessageReceived(p0)
 
+        if (p0.data["title"] == "Feed Alert") {
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            createNotificationChannel(notificationManager)
+            Log.e("@@@@","done")
+        }
+
         // checking for type = food and show notification
         if (p0.data["type"] == "food") {
             val intent = Intent(this, DashboardActivity::class.java)
@@ -71,15 +78,14 @@ class FirebaseService : FirebaseMessagingService() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(notificationManager: NotificationManager) {
 
-        val channelName = "PetSyncTest13"
+        val channelName = "PetSyncTest"
         val channel = NotificationChannel(
-            "demoChannel1", channelName,
+            "demoChannel", channelName,
             NotificationManager.IMPORTANCE_HIGH
         ).apply {
-            description = "PetSyncTest13"
+            description = "PetSyncTest"
             enableLights(true)
             enableVibration(true)
             lightColor = Color.WHITE

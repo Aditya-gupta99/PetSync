@@ -99,4 +99,6 @@ dependencies {
 
     // firebase cloud messaging
     implementation("com.google.firebase:firebase-messaging:23.3.1")
+
+    implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+")
 }
