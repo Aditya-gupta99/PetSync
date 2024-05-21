@@ -2,7 +2,7 @@ package com.sparklead.petsync.routes
 
 object HttpRoutes {
 
-    private const val BASE_URL = "http://192.168.151.21:5000/petSync"
+    private const val BASE_URL = "http://192.168.203.21:5000/petSync"
 
     const val ON_OFF = "$BASE_URL/onOff"
 

@@ -146,8 +146,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun videoCallServices(userID: String) {
-        val appID: Long = 67143961 // your App ID of Zoge Cloud
-        val appSign = "93204944c2b3600a7dea583500c1a2f2c998e54e60bec98edaf7f8147ea3e00e" // your App Sign of Zoge Cloud
+        val appID: Long = 953997834 // your App ID of Zoge Cloud
+        val appSign = "b0227da21e87928951eaa4746d6b4023ef28f5510e132bf240864b2bce92ea73" // your App Sign of Zoge Cloud
         val application = requireActivity().application // Android's application context
         val callInvitationConfig = ZegoUIKitPrebuiltCallInvitationConfig()
 //        callInvitationConfig.notifyWhenAppRunningInBackgroundOrQuit = true

@@ -33,14 +33,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true
+        compose = true
+        buildConfig = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
 }
 
@@ -101,4 +107,27 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging:23.3.1")
 
     implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+    // ViewModel utilities for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    //Material3 icons
+    implementation("androidx.compose.material:material-icons-extended:1.5.4")
+
+    // Jetpack Compose
+    implementation("androidx.compose.material:material:1.6.5")
+    implementation("androidx.compose.compiler:compiler:1.5.11")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.5")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.5")
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.compose.material:material-icons-extended:1.6.5")
+
+    //
+    implementation("androidx.compose.material:material:1.6.5")
 }
